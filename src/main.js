@@ -7,7 +7,7 @@ import { initTable } from "./components/table.js";
 import { initPagination } from "./components/pagination.js";
 import { initSearching } from "./components/searching.js";
 import { initSorting } from "./components/sorting.js";
-import { initFiltering } from "./components/filtering.js";
+import { initTable } from "./components/table.js";
 
 // @todo: подключение
 

@@ -15,7 +15,7 @@ import { initTable } from "./components/table.js";
 
 
 // Исходные данные используемые в render()
-const {data, ...indexes} = initData(sourceData);
+const { data, ...indexes } = initData(sourceData);
 
 /**
  * Сбор и обработка полей из таблицы
@@ -32,6 +32,7 @@ function collectState() {
     ...state,
     rowsPerPage,
     page,
+    total,
   };
 }
 
@@ -63,8 +64,8 @@ const sampleTable = initTable(
 
 // @todo: инициализация
 const applyPagination = initPagination(
-    sampleTable.pagination.elements,             // передаём сюда элементы пагинации, найденные в шаблоне
-    (el, page, isCurrent) => {                    // и колбэк, чтобы заполнять кнопки страниц данными
+    sampleTable.pagination.elements,   // передаём сюда элементы пагинации, найденные в шаблоне
+    (el, page, isCurrent) => {      // и колбэк, чтобы заполнять кнопки страниц данными
         const input = el.querySelector("input");
         const label = el.querySelector("span");
         input.value = page;
@@ -86,7 +87,7 @@ const applyFiltering = initFiltering(sampleTable.filter.elements, {
   searchBySeller: indexes.sellers, // для элемента с именем searchBySeller устанавливаем массив продавцов
 });
 
-const appRoot = document.querySelector('#app');
+const appRoot = document.querySelector("#app");
 appRoot.appendChild(sampleTable.container);
 
 render();

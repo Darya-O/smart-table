@@ -15,7 +15,7 @@ import { initTable } from "./components/table.js";
 
 
 // Исходные данные используемые в render()
-const { data, ...indexes } = initData(sourceData);
+const api = initData(sourceData);
 
 /**
  * Сбор и обработка полей из таблицы

@@ -55,10 +55,10 @@ async function render(action) {
 
 const sampleTable = initTable(
     {
-    tableTemplate: "table",
-    rowTemplate: "row",
-    before: ["search", "header", "filter"],
-    after: ["pagination"],
+    tableTemplate: 'table',
+    rowTemplate: 'row',
+    before: ['search', 'header', 'filter'],
+    after: ['pagination']
   },
   render);
 
